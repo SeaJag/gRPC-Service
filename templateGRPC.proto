@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "mahb.grpc";
+
+service TemplateGRPC{
+    rpc TemplateGRPCEndpoint(TemplateGRPCRequest)  returns (TemplateGRPCResponse);   
+}
+
+message TemplateGRPCRequest{
+	int32 number = 1;
+}
+
+message TemplateGRPCResponse{
+	string reply = 1;
+}
